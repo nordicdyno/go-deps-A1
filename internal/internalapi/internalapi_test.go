@@ -46,3 +46,7 @@ func TestSQLiteConnect(t *testing.T) {
 		t.Errorf("table name check failed. expected: %v, got: %v", tableName, gotTableName)
 	}
 }
+
+func TestTopSecret(t *testing.T) {
+	topSecret()
+}

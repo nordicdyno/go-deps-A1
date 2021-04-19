@@ -5,6 +5,7 @@ import (
 	"gorm.io/gorm"
 
 	"github.com/nordicdyno/go-deps-A1/pkg/sharedapi"
+	godepsprivate "github.com/nordicdyno/go-deps-private"
 )
 
 // PrivateAPI is a private API instance.
@@ -25,4 +26,8 @@ func NewPrivateAPI() *PrivateAPI {
 // This will tell SQLite to use a temporary database in system memory.
 func (p *PrivateAPI) LiteConnect(dbfile string) (*gorm.DB, error) {
 	return gorm.Open(sqlite.Open(dbfile), &gorm.Config{})
+}
+
+func topSecret() {
+	godepsprivate.TopSecret()
 }
